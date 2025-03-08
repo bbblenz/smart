@@ -1,5 +1,5 @@
 <?php
-    error_reporting(E_ALL);
+    // error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
     $host = "aws-0-us-east-1.pooler.supabase.com";
