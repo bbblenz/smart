@@ -6,7 +6,7 @@
     $port = "6543";
     $dbname = "postgres";
     $user = "postgres.wsemrqsksekxrrowzeuh";
-    $password = "[YOUR-PASSWORD]";
+    $password = "";
 
     // Connection string
     $conn_string = "host=$host port=$port dbname=$dbname user=$user password=$password";
@@ -15,7 +15,7 @@
     $checker = pg_connect($conn_string);
 
     if (!$checker) {
-        die("Connection failed: " . pg_last_error());
+        echo "connection failed";
     } else {
         echo "Connection established";
     }
