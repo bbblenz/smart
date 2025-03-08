@@ -14,7 +14,7 @@
 
             // Use prepared statements
             $query = "INSERT INTO mytable (username, password) VALUES ($1, $2)";
-            $result = pg_query_params($conn_string, $query, array($username, $hashed_password));
+            $result = pg_query_params($checker, $query, array($username, $hashed_password));
 
             // Execute the query
             if ($result) {
