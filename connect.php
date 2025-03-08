@@ -1,8 +1,11 @@
 <?php
-    $host = "db.wsemrqsksekxrrowzeuh.supabase.co";
-    $port = "5432";
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
+    $host = "aws-0-us-east-1.pooler.supabase.com";
+    $port = "6543";
     $dbname = "postgres";
-    $user = "postgres";
+    $user = "postgres.wsemrqsksekxrrowzeuh";
     $password = "[YOUR-PASSWORD]";
 
     // Connection string
@@ -13,5 +16,7 @@
 
     if (!$checker) {
         die("Connection failed: " . pg_last_error());
+    } else {
+        echo "Connection established";
     }
 ?>
