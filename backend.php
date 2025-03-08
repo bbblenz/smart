@@ -1,4 +1,7 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
     if (isset($_POST['register'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -17,7 +20,7 @@
             if ($result) {
                 echo "Inserted into database";
             } else {
-                echo "Failed to insert";
+                echo "Failed to insert: " . pg_last_error();
             }
 
         } else {
