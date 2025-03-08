@@ -1,13 +1,17 @@
 <?php
-   DATABASE_URL=postgresqli://postgres:@db.wsemrqsksekxrrowzeuh.supabase.co:5432/postgres
+    $host = "db.wsemrqsksekxrrowzeuh.supabase.co";
+    $port = "5432";
+    $dbname = "postgres";
+    $user = "postgres";
+    $password = "[YOUR-PASSWORD]";
 
-    //connect
-    $checker = mysqli_connect($postgres,$db.wsemrqsksekxrrowzeuh.supabase.co,$password,$postgres);
+    // Connection string
+    $conn_string = "host=$host port=$port dbname=$dbname user=$user password=$password";
 
-    if($checker){
-        // echo "connection established";
-    }
-    else{
-        echo "connection failed";
+    // Connect to PostgreSQL database
+    $checker = pg_connect($conn_string);
+
+    if (!$checker) {
+        die("Connection failed: " . pg_last_error());
     }
 ?>
