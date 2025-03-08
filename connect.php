@@ -15,7 +15,8 @@
     $checker = pg_connect($conn_string);
 
     if (!$checker) {
-        echo "connection failed";
+        echo "Connection failed";
+        exit;
     } else {
         echo "Connection established";
     }
