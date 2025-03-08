@@ -2,9 +2,11 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
 
+    include("connect.php");
+
     if (isset($_POST['register'])) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
         // Validate user input
         if (!empty($username) && !empty($password)) {
@@ -20,7 +22,7 @@
             if ($result) {
                 echo "Inserted into database";
             } else {
-                echo "Failed to insert: " . pg_last_error();
+                echo "Failed to insert: " . pg_last_error($checker);
             }
 
         } else {
@@ -28,3 +30,4 @@
         }
     }
 ?>
+
