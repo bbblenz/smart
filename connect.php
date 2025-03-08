@@ -1,8 +1,8 @@
 <?php
-    $servername="localhost";
-    $username="root";
+    $servername="db.wsemrqsksekxrrowzeuh.supabase.co";
+    $username="postgres";
     $password="";
-    $dbname="projectdb";
+    $dbname="postgres";
 
     //connect
     $checker = mysqli_connect($servername,$username,$password,$dbname);
