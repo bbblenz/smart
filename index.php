@@ -14,7 +14,7 @@ error_reporting(0);
 <body>
     <div class="login-container">
         <h2>Welcome!</h2>
-        <form action="#" method="POST">
+        <form action="backend.php" method="POST">
             <input type="text" placeholder="Username" name="username">
             <input type="password" placeholder="Password" name="password">
             <button type="submit" name="register" value="register">Log In</button>
